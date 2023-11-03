@@ -1,0 +1,296 @@
+<div class="carousal">
+    <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/carousals/carousal_one.jpg" class="d-block w-100" alt="Fist Slide">
+            </div>
+            <div class="carousel-item">
+                <img src="images/carousals/carousal_two.jpg" class="d-block w-100" alt="Second Slide">
+            </div>
+            <div class="carousel-item">
+                <img src="images/carousals/carousal_three.jpg" class="d-block w-100" alt="Thord Slide">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+<div class="container">
+    <img class=" container mt-5" src="images/ads/icc-cwc-banner-collection-one.png" alt="ICC Steam Ad">
+</div>
+
+<div class="container text-start">
+    <h4 class="recommend-movies"><b>Recommended Movies</b></h4>
+</div>
+{{#if user}}
+<div class="container">
+    <p class="intro">Based from <b><a href="#"
+                target="_blank">{{user.name}}'s Movie Ticket Card</a></b>
+    <p>
+</div>
+{{else}}
+<div class="container">
+    <p class="intro">Based from <b><a href="#"
+                target="_blank">Trending</a></b>
+    <p>
+</div>
+{{/if}}
+
+
+
+<div id="carouselExampleControls" class="movie-carousal carousel carousel-dark slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="movie-carousal carousel-item active">
+            <div class="card-wrapper container-sm d-flex  justify-content-around">
+                {{#each moviesTrendingOne}}
+                <a href="/movie-info-trending-one/{{this._id}}">
+                    <div class="card">
+                        <img src="/images/movies-trending-one/{{this._id}}.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{this.Name}}</h5>
+                            <div class="imax-logo"></div>
+                            <div class="info-section">
+                                <label>{{this.Language}}</label>
+                                <span>{{this.Category}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                {{/each}}
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="card-wrapper container-sm d-flex   justify-content-around">
+                {{#each moviesTrendingTwo}}
+                <a href="/movie-info-trending-two/{{this._id}}">
+                    <div class="card">
+                        <img src="/images/movies-trending-two/{{this._id}}.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{this.Name}}</h5>
+                            <div class="imax-logo"></div>
+                            <div class="info-section">
+                                <label>{{this.Language}}</label>
+                                <span>{{this.Category}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                {{/each}}
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="card-wrapper container-sm d-flex  justify-content-around">
+                {{#each moviesTrendingThree}}
+                <a href="/movie-info-trending-three/{{this._id}}">
+                    <div class="card">
+                        <img src="/images/movies-trending-three/{{this._id}}.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{this.Name}}</h5>
+                            <div class="info-section">
+                                <label>{{this.Language}}</label>
+                                <span>{{this.Category}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                {{/each}}
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+
+<div class="container">
+    <img class=" container mt-5" src="images/ads/stream-leadin-web-collection.png" alt="Steam Ad">
+</div>
+
+<div class="container text-start">
+    <h4 class="recommend-movies"><b>The Best Of Live Events</b></h4>
+</div>
+<div class="container mt-4">
+    <a href="#">
+        <div class="card" style="width: 12rem;">
+            <img class="card-img-top" src="images/live-event-cards/card-one.jpg" alt="Card image cap">
+        </div>
+    </a>
+    <a href="#">
+        <div class="ms-4 card" style="width: 12rem;">
+            <img class="card-img-top" src="images/live-event-cards/card-two.png" alt="Card image cap">
+        </div>
+    </a>
+    <a href="#">
+        <div class="ms-4 card" style="width: 12rem;">
+            <img class="card-img-top" src="images/live-event-cards/card-three.png" alt="Card image cap">
+        </div>
+    </a>
+    <a href="#">
+        <div class="ms-4 card" style="width: 12rem;">
+            <img class="card-img-top" src="images/live-event-cards/card-four.jpg" alt="Card image cap">
+        </div>
+    </a>
+    <a href="#">
+        <div class="ms-4 card" style="width: 12rem;">
+            <img class="card-img-top" src="images/live-event-cards/card-one.jpg" alt="Card image cap">
+        </div>
+    </a>
+</div>
+<div class="footer mt-4">
+    <footer class="bg-dark text-center text-lg-start mt-4">
+        <!-- Grid container -->
+        <div class="container p-4">
+            <!--Grid row-->
+            <div class="row">
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase text-light">Links</h5>
+
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                            <a href="#!" class="text-light">Link 1</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-light">Link 2</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-light">Link 3</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-light">Link 4</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase mb-0 text-light">Links</h5>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#!" class="text-light">Link 1</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-light">Link 2</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-light">Link 3</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-light">Link 4</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase text-light">Links</h5>
+
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                            <a href="#!" class="text-light">Link 1</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-light">Link 2</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-light">Link 3</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-light">Link 4</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase text-light mb-0">Links</h5>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#!" class="text-light">Link 1</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-light">Link 2</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-light">Link 3</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-light">Link 4</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+            </div>
+            <!--Grid row-->
+        </div>
+        <!-- Grid container -->
+        <footer class="bg-dark text-center text-white">
+            <!-- Grid container -->
+            <div class="container p-4 pb-0">
+                <!-- Section: Social media -->
+                <section class="mb-4">
+                    <!-- Facebook -->
+                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                            class="fab fa-facebook-f"></i></a>
+
+                    <!-- Twitter -->
+                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                            class="fab fa-twitter"></i></a>
+
+                    <!-- Google -->
+                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                            class="fab fa-google"></i></a>
+
+                    <!-- Instagram -->
+                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                            class="fab fa-instagram"></i></a>
+
+                    <!-- Linkedin -->
+                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                            class="fab fa-linkedin-in"></i></a>
+
+                    <!-- Github -->
+                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                            class="fab fa-github"></i></a>
+                </section>
+                <!-- Section: Social media -->
+            </div>
+            <!-- Grid container -->
+
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                © 2023 Copyright:
+                <a class="text-white" href="https://in.bookmyshow/">BookMyShow</a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+    </footer>
+</div>

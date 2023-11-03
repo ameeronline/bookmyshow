@@ -1,0 +1,56 @@
+<div class="text-center mt-5">
+    <div class="desclaimer container">
+        <div class="alert alert-danger" role="alert">
+            <b>Note: </b>In Trending 3, you can add only upto 4 movies. To verify the change, you should have to enter
+            your Password from the next page.
+        </div>
+    </div>
+</div>
+<section>
+    <div class="container mt-4">
+        <h4><button type="button" class="btn btn-danger add-products-btn"><b>#Trending 3</b></button></h4>
+    </div>
+    <div class="container mt-4">
+        <div class="row col-md-6">
+            <h4 class="text-center">Add Movies</h4>
+            <form action="/admin/add-movies-trending-three" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="">ID</label>
+                    <input type="text" name="ID" class="form-control" id="" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="">Name</label>
+                    <input type="text" name="Name" class="form-control" id="" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="">Language</label>
+                    <input type="text" name="Language" class="form-control" id="" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="">Genre</label>
+                    <input type="text" name="Category" class="form-control" id="" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="">Description</label>
+                    <input type="text" name="Description" class="form-control rounded-0" id="exampleFormControlTextarea1" rows="10" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="">Cast &amp; Crew</label>
+                    <input type="text" name="CastAndCrew" class="form-control rounded-0" id="exampleFormControlTextarea1" rows="10" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="">Attachments (Trailer Link)</label>
+                    <input type="text" name="Attachment" class="form-control rounded-0" id="exampleFormControlTextarea1" rows="10" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="">Image</label>
+                    <input type="file" name="Image" class="form-control" id="" placeholder="">
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-danger mt-5 mb-3">Submit</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,29 @@
+<div class="container mt-5">
+    <div class="movieDetailsCard card-wrapper">
+        <div class="card">
+            <img src="/images/movies-trending-two/{{movieDetails._id}}.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{movieDetails.Name}}</h5>
+                <div class="imax-logo"></div>
+                <div class="info-section">
+                    <label>{{movieDetails.Language}}</label>
+                    <span>{{movieDetails.Category}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="movieDetails">
+        <h6><b>Description</b></h6>
+        <p>{{movieDetails.Description}}</p>
+        <h6>{{movieDetails.CastAndCrew}}</h6>
+        <h6 class="mt-3"><b>Watch Trailer</b></h6>
+
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{movieDetails.Attachment}}" allowfullscreen></iframe>
+        </div>
+
+        <div class="text-center mt-3">
+            <a href="/seat-booking/{{movieDetails._id}}"><button type="button" class="btn btn-danger btn-lg btn-block"><b>Book Tickets</b></button></a>
+        </div>
+    </div>
+</div>
